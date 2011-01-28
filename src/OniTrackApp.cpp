@@ -10,7 +10,8 @@
 #include <XnVWaveDetector.h>
 
 #define SAMPLE_XML_FILE "/Users/holz/apps/Nite-1.3.0.18/Data/Sample-Tracking.xml"
-
+#define WIDTH 1000
+#define HEIGHT 1000
 
 using namespace ci;
 using namespace ci::app;
@@ -46,12 +47,13 @@ void XN_CALLBACK_TYPE OnWaveCB(void* cxt)
 // callback for a new position of any hand
 void XN_CALLBACK_TYPE OnPointUpdate(const XnVHandPointContext* pContext, void* cxt)
 {
-	handCoords = Vec3f(pContext->ptPosition.X, pContext->ptPosition.Y, -pContext->ptPosition.Z);
+	handCoords = Vec3f(pContext->ptPosition.X + WIDTH/2, -pContext->ptPosition.Y + HEIGHT/2, -pContext->ptPosition.Z);
 	printf("%d: (%f,%f,%f) [%f]\n", pContext->nID, pContext->ptPosition.X, pContext->ptPosition.Y, pContext->ptPosition.Z, pContext->fTime);
 }
 
 class OniTrackApp : public AppBasic {
   public:
+	void prepareSettings(Settings* settings);
 	void setup();
 	void mouseDown( MouseEvent event );	
 	void update();
@@ -65,6 +67,11 @@ class OniTrackApp : public AppBasic {
 	XnVWaveDetector wc;
 	
 };
+
+void OniTrackApp::prepareSettings(Settings* settings)
+{
+	settings->setWindowSize(WIDTH, HEIGHT);
+}
 
 void OniTrackApp::setup()
 {
