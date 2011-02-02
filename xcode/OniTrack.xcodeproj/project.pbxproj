@@ -24,6 +24,7 @@
 		6639E25012E876A90017DC9F /* libOpenNI.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6639E24C12E876A90017DC9F /* libOpenNI.dylib */; };
 		6639E25312E876C00017DC9F /* libXnVCNite.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6639E25112E876C00017DC9F /* libXnVCNite.dylib */; };
 		6639E25412E876C00017DC9F /* libXnVNite.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6639E25212E876C00017DC9F /* libXnVNite.dylib */; };
+		6679C7DC12F24933008E1ECE /* PointDrawer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6679C7DB12F24933008E1ECE /* PointDrawer.cpp */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,8 @@
 		6639E24C12E876A90017DC9F /* libOpenNI.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libOpenNI.dylib; path = "../../../../../apps/OpenNI-Bin-MacOSX-v1.0.0.25/Lib/libOpenNI.dylib"; sourceTree = SOURCE_ROOT; };
 		6639E25112E876C00017DC9F /* libXnVCNite.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libXnVCNite.dylib; path = "../../../../../apps/Nite-1.3.0.18/Bin/libXnVCNite.dylib"; sourceTree = SOURCE_ROOT; };
 		6639E25212E876C00017DC9F /* libXnVNite.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libXnVNite.dylib; path = "../../../../../apps/Nite-1.3.0.18/Bin/libXnVNite.dylib"; sourceTree = SOURCE_ROOT; };
+		6679C7DB12F24933008E1ECE /* PointDrawer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PointDrawer.cpp; path = ../src/PointDrawer.cpp; sourceTree = SOURCE_ROOT; };
+		6679C7DF12F24939008E1ECE /* PointDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PointDrawer.h; path = ../include/PointDrawer.h; sourceTree = SOURCE_ROOT; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* OniTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OniTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -84,6 +87,7 @@
 		080E96DDFE201D6D7F000001 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				6679C7DB12F24933008E1ECE /* PointDrawer.cpp */,
 				00BAE6590E7ED9C10018A608 /* OniTrackApp.cpp */,
 			);
 			name = Source;
@@ -140,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				32CA4F630368D1EE00C91783 /* OniTrack_Prefix.pch */,
+				6679C7DF12F24939008E1ECE /* PointDrawer.h */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
@@ -223,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00BAE65A0E7ED9C10018A608 /* OniTrackApp.cpp in Sources */,
+				6679C7DC12F24933008E1ECE /* PointDrawer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
